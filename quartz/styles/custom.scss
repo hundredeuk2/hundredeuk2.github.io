@@ -1,3 +1,129 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Landing page styles
+.landing-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 1rem 0 3rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--lightgray);
+
+  @media all and (max-width: 800px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+.landing-hero-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.landing-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.landing-hero-name {
+  margin: 0 0 0.25rem 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.landing-hero-role {
+  margin: 0 0 1rem 0;
+  color: var(--secondary);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.landing-hero-bio {
+  margin: 0 0 0.75rem 0;
+  color: var(--darkgray);
+  line-height: 1.6;
+}
+
+.landing-hero-tags {
+  margin: 0;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin: 2rem 0 3rem 0;
+
+  @media all and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.landing-col {
+  min-width: 0;
+
+  > h2 {
+    margin: 0 0 1.25rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--lightgray);
+    font-size: 1.4rem;
+  }
+}
+
+.landing-item {
+  margin-bottom: 1.5rem;
+
+  > h3 {
+    margin: 0 0 0.35rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+  }
+
+  > p {
+    margin: 0.35rem 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--darkgray);
+  }
+}
+
+.landing-venue {
+  color: var(--secondary) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500;
+}
+
+.landing-metric {
+  color: var(--gray) !important;
+  font-size: 0.82rem !important;
+  font-style: italic;
+}
+
+.landing-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--darkgray);
+  border-radius: 6px;
+  color: var(--darkgray);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: var(--secondary);
+    color: var(--light);
+    border-color: var(--secondary);
+  }
+}
